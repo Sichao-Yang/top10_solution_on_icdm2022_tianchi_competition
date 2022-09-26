@@ -1,0 +1,68 @@
+# detailed description of parameters are stored in lib_dgl/argparser.py
+# Model
+method: SIGNV1    #SIGNV1-5 NARS_JK_GAMLP NARS_R_GAMLP
+n_layers_1: 3
+n_layers_2: 3
+n_layers_3: 3
+num_hidden: 192
+alpha: 0.3
+input_drop: 0.1
+att_drop: 0.0
+dropout: 0.1
+pre_process: True
+act: leaky_relu
+pre_dropout: False
+residual: False
+bns: True
+# RLU - reliable label utilization
+use_rlu: False
+label_num_hops: 0
+gamma: 10
+label_drop: 0.0
+# SCR - consistency regularization
+# Pseudo-Labelling
+use_pseudo: True
+use_scr: True
+use_dcr: True
+stages: [15,5,5,5]
+pseudo_lam: 0.5
+pseudo_lam_max: 0.7
+ramp_epochs: [5, 5, 3, 1]
+tops: [0.95, 0.85]
+downs: [0.85, 0.75]
+ema_decay: 0.85
+adap: True
+unsup_losstype: mse
+sup_lam: 1.0
+unsup_lam: 0.7
+temp: 1.0
+enhance: True
+mu: 1
+# NARS
+relation_subset_path: config/subsets/icdm2022_rand_subsets
+remake_subsets: False
+num_hops: 0
+cpu_preprocess: True
+# dataset
+dataset: icdm
+session1_only: False
+cv_id: -1
+kfold: 4
+# traning
+batch_size: 5000
+lr: 0.005
+l2: 0.0005
+do_w: 0.3
+class_weight: [1, 0.8]
+early_stopping: False
+stop_patience: 1000
+loss_fcn: focal
+focal_gamma: 1
+opt: adamw
+momentum: 0.9
+nesterov: True
+sched: plateau
+warmup_epochs: 3
+# env
+device_id: 0
+seed: 33
