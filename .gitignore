@@ -2,7 +2,6 @@ tech_reports/results
 
 # IDE
 .idea
-*.txt
 # ---> Python
 # Byte-compiled / optimized / DLL files
 __pycache__/
