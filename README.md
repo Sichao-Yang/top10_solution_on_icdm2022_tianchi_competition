@@ -22,3 +22,7 @@ solution for seesion 1: `python train.py -c config/dgl_session1.yml`
 
 solution for session 2: `python train.py -c config/dgl_session2.yml`
 
+dataset for this competition:
+
+链接：https://pan.baidu.com/s/1gE-kNJ1fr-cFd1blnchtQw 
+提取码：rzdy
