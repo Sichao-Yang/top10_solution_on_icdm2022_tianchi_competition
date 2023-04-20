@@ -121,7 +121,6 @@ def training(args, stage, epoch, epochs, ema_step, model, teacher_model, feats, 
     
     return train_loss, train_acc, train_ap, ema_step
 
-
 def get_models(subset_dim, feat_dim, num_classes):
     teacher_models = []
     for i in range(args.kfold):
@@ -321,7 +320,6 @@ def Pipeline(device, args, stage, epochs, log, logsum, dataset=None):
         log.info(f"Done on CV_{args.cv_id}!")
     
     return dataset, logsum
-
 
 def get_paths(args, log):
     args.code_root = osp.abspath(osp.dirname(__file__))

@@ -18,9 +18,9 @@ run `pip install -r requirement.txt`, dgl library is used.
 
 # Run experiment
 
-solution for seesion 1: `python train.py -c config/dgl_session1.yml`
+solution for seesion 1: `python main.py -c config/dgl_session1.yml`
 
-solution for session 2: `python train.py -c config/dgl_session2.yml`
+solution for session 2: `python main.py -c config/dgl_session2.yml`
 
 dataset for this competition:
 
